@@ -6,6 +6,7 @@ import com.jaspermsnbk.ai.basic_mcp.repository.DocumentRepository;
 import com.jaspermsnbk.ai.basic_mcp.service.DocumentIngestionService;
 import com.jaspermsnbk.ai.basic_mcp.service.DuplicateDocumentException;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,7 +38,7 @@ public class DocumentController {
         } catch (DuplicateDocumentException e) {
             return ResponseEntity.status(HttpStatus.CONFLICT).build();
         } catch (IOException e) {
-            return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).build();
+            return ResponseEntity.status(HttpStatusCode.valueOf(422)).build();
         }
     }
 

@@ -21,7 +21,15 @@
       "Bash(jar -xf /home/jasper/.m2/repository/org/springframework/ai/spring-ai-commons/2.0.0/spring-ai-commons-2.0.0.jar 'org/springframework/ai/document/Document$Builder.class')",
       "Bash(javap -p 'org/springframework/ai/document/Document$Builder.class')",
       "Bash(jar -xf /home/jasper/.m2/repository/org/springframework/ai/spring-ai-model/2.0.0/spring-ai-model-2.0.0.jar org/springframework/ai/tool/annotation/Tool.class)",
-      "Bash(javap -p org/springframework/ai/tool/annotation/Tool.class)"
+      "Bash(javap -p org/springframework/ai/tool/annotation/Tool.class)",
+      "Bash(mvn dependency:tree)",
+      "Bash(jar tf *)",
+      "Bash(javap org/springframework/ai/document/Document)",
+      "Bash(jar xf *)",
+      "Bash(javap 'org/springframework/ai/document/Document$Builder')",
+      "Bash(mvn test *)",
+      "Bash(grep -v \"/$\")",
+      "Bash(xargs -I{} sh -c 'unzip -p {} META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports 2>/dev/null')"
     ]
   }
 }

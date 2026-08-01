@@ -1,0 +1,7 @@
+spring:
+  autoconfigure:
+    exclude:
+      - org.springdoc.webmvc.core.configuration.SpringDocWebMvcConfiguration
+      - org.springdoc.webmvc.core.configuration.MultipleOpenApiSupportConfiguration
+      - org.springdoc.core.configuration.SpringDocConfiguration
+      - org.springdoc.core.properties.SpringDocConfigProperties
