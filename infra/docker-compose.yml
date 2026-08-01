@@ -1,6 +1,6 @@
 services:
   postgres:
-    image: ghcr.io/postgresml/postgresml:2.10.0
+    image: pgvector/pgvector:pg17
     platform: linux/amd64
     container_name: postgres_db
     restart: unless-stopped
@@ -11,7 +11,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data_ml:/var/lib/postgresql/data
+      - postgres_data_vector17:/var/lib/postgresql
 
 volumes:
-  postgres_data_ml:
+  postgres_data_vector17:

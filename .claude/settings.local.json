@@ -29,7 +29,9 @@
       "Bash(javap 'org/springframework/ai/document/Document$Builder')",
       "Bash(mvn test *)",
       "Bash(grep -v \"/$\")",
-      "Bash(xargs -I{} sh -c 'unzip -p {} META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports 2>/dev/null')"
+      "Bash(xargs -I{} sh -c 'unzip -p {} META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports 2>/dev/null')",
+      "Bash(grep -v \"\\\\.java$\")",
+      "Bash(mvn clean *)"
     ]
   }
 }

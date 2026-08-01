@@ -17,8 +17,11 @@ spring:
   ai:
     anthropic:
       api-key: ${ANTHROPIC_API_KEY}
-    postgresml:
-      base-url: ${POSTGRESML_BASE_URL:http://localhost:8080}
+    ollama:
+      base-url: ${OLLAMA_BASE_URL:http://localhost:11434}
+      embedding:
+        options:
+          model: nomic-embed-text
     vectorstore:
       pgvector:
         initialize-schema: false
@@ -30,3 +33,8 @@ spring:
         name: basic-mcp-server
         version: 0.0.1
         type: SYNC
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,info
