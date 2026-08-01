@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(jar -tf /home/jasper/.m2/repository/org/springframework/ai/spring-ai-model/2.0.0/spring-ai-model-2.0.0.jar)",
+      "Bash(jar -tf /home/jasper/.m2/repository/org/springframework/ai/spring-ai-commons/2.0.0/spring-ai-commons-2.0.0.jar)",
+      "Bash(grep -v \"\\\\.class$\\\\|META-INF\")",
+      "Bash(jar -tf /home/jasper/.m2/repository/org/springframework/ai/spring-ai-pgvector-store/2.0.0/spring-ai-pgvector-store-2.0.0.jar)",
+      "Bash(grep \"\\\\.class$\")",
+      "Bash(jar -tf /home/jasper/.m2/repository/org/springframework/ai/spring-ai-autoconfigure-vector-store-pgvector/2.0.0/spring-ai-autoconfigure-vector-store-pgvector-2.0.0.jar)",
+      "Read(//tmp/**)",
+      "Bash(jar -xf /home/jasper/.m2/repository/org/springframework/ai/spring-ai-autoconfigure-vector-store-pgvector/2.0.0/spring-ai-autoconfigure-vector-store-pgvector-2.0.0.jar META-INF/spring-configuration-metadata.json)",
+      "Bash(jar -tf /home/jasper/.m2/repository/org/springframework/ai/spring-ai-autoconfigure-model-tool/2.0.0/spring-ai-autoconfigure-model-tool-2.0.0.jar)",
+      "Bash(jar -xf /home/jasper/.m2/repository/org/springframework/ai/spring-ai-autoconfigure-vector-store-pgvector/2.0.0/spring-ai-autoconfigure-vector-store-pgvector-2.0.0.jar -C /tmp/pgvec-inspect META-INF/maven)",
+      "Bash(jar -tf /home/jasper/.m2/repository/org/springframework/ai/spring-ai-vector-store/2.0.0/spring-ai-vector-store-2.0.0.jar)",
+      "Bash(jar -xf /home/jasper/.m2/repository/org/springframework/ai/spring-ai-vector-store/2.0.0/spring-ai-vector-store-2.0.0.jar org/springframework/ai/vectorstore/SearchRequest.class)",
+      "Bash(javap -p org/springframework/ai/vectorstore/SearchRequest.class)",
+      "Bash(jar -xf /home/jasper/.m2/repository/org/springframework/ai/spring-ai-vector-store/2.0.0/spring-ai-vector-store-2.0.0.jar 'org/springframework/ai/vectorstore/SearchRequest$Builder.class')",
+      "Bash(javap -p 'org/springframework/ai/vectorstore/SearchRequest$Builder.class')",
+      "Bash(jar -xf /home/jasper/.m2/repository/org/springframework/ai/spring-ai-commons/2.0.0/spring-ai-commons-2.0.0.jar org/springframework/ai/document/Document.class)",
+      "Bash(javap -p org/springframework/ai/document/Document.class)",
+      "Bash(jar -xf /home/jasper/.m2/repository/org/springframework/ai/spring-ai-commons/2.0.0/spring-ai-commons-2.0.0.jar 'org/springframework/ai/document/Document$Builder.class')",
+      "Bash(javap -p 'org/springframework/ai/document/Document$Builder.class')",
+      "Bash(jar -xf /home/jasper/.m2/repository/org/springframework/ai/spring-ai-model/2.0.0/spring-ai-model-2.0.0.jar org/springframework/ai/tool/annotation/Tool.class)",
+      "Bash(javap -p org/springframework/ai/tool/annotation/Tool.class)"
+    ]
+  }
+}

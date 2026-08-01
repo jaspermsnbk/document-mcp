@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: basic-mcp
+  datasource:
+    url: jdbc:postgresql://localhost:5432/basic_mcp
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  batch:
+    job:
+      enabled: false
+    jdbc:
+      initialize-schema: always
+  ai:
+    anthropic:
+      api-key: ${ANTHROPIC_API_KEY}
+    postgresml:
+      base-url: ${POSTGRESML_BASE_URL:http://localhost:8080}
+    vectorstore:
+      pgvector:
+        initialize-schema: false
+        index-type: HNSW
+        distance-type: COSINE_DISTANCE
+        dimensions: 768
+    mcp:
+      server:
+        name: basic-mcp-server
+        version: 0.0.1
+        type: SYNC
